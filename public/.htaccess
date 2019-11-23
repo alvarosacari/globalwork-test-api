@@ -11,7 +11,7 @@
 
     # Redirect https
     RewriteCond %{HTTPS} off
-    RewriteRule (.*) https://sgc-api.geobar-ingenieros.com/$1 [R,L]
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
