@@ -4,8 +4,8 @@ namespace App\Notifications;
 
 use App\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class UserCreatedNotification extends Notification
 {
@@ -42,13 +42,13 @@ class UserCreatedNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage())
-                    ->subject('Datos de la nueva cuenta')
-                    ->greeting('¡Te damos la bienvenida a Geobar SGC!')
-                    ->line('Estos son los datos de su cuenta:')
-                    ->line('password actual es: '.$this->password)
-                    ->line('email: '.$this->user->email)
-                    ->line('¡Gracias por ser parte de Geobar SGC!')
-                    ->salutation('Saludos '.config('app.name'));
+            ->subject('Datos de la nueva cuenta')
+            ->greeting('¡Te damos la bienvenida a globalwork-test-api!')
+            ->line('Estos son los datos de su cuenta:')
+            ->line('password actual es: ' . $this->password)
+            ->line('email: ' . $this->user->email)
+            ->line('¡Gracias por ser parte de globalwork-test-api!')
+            ->salutation('Saludos ' . config('app.name'));
     }
 
     /**

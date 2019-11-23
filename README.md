@@ -1,1 +1,1 @@
-# geobar-ingenieros-sgc-api
+# Globalwork test API

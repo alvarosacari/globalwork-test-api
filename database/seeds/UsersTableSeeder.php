@@ -18,9 +18,9 @@ class UsersTableSeeder extends Seeder
         \DB::statement('SET FOREIGN_KEY_CHECKS=0');
 
         $userAdmin = [
-            'name' => 'Geobar Ingenieros',
-            'email' => 'gerencia@geobar-ingenieros.com',
-            'password' => \Hash::make('!geobar2019#'),
+            'name' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => \Hash::make('!admin2019#'),
         ];
 
         $user = User::create($userAdmin);
